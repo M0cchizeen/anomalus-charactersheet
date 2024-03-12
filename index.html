@@ -1,1 +1,511 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Ficha de RPG</title>
+</head>
+<div id="private-content">
+<body>
+
+    <div class="form-container">
+        <h1>Anomalus</h1>
+        <div class="row">
+            <div class="column">
+                <label for="personagem">Personagem:</label>
+                <input type="text" id="personagem" name="personagem">
+                <label for="jogador">Jogador:</label>
+                <input type="text" id="jogador" name="jogador">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="raca">Raça:</label>
+                <input type="text" id="raca" name="raca">
+                <label for="xp">XP:</label>
+                <input type="text" id="xp" name="xp" maxlength="2">
+                <label for="pontos">Pontos:</label>
+                <input type="text" id="pontos" name="pontos" maxlength="2">
+
+				
+            </div>
+        </div>
+        
+    </div>
+
+
+	<div class="character-sheet">
+		
+<div class="att-img-container">
+	
+            <div class="att-img">
+                <img src="styles/atributos.png" alt="Imagem dos Atributos">
+            </div>
+			
+			<div class="att-input-container">
+		<div class="att">
+				<input type="number" class="input for" maxlength="1" value="1">
+				
+				<input type="number" class="input des" maxlength="1" value="1">
+				
+				<input type="number" class="input int" maxlength="1" value="1">
+				
+				<input type="number" class="input con" maxlength="1" id="con" value="1">
+				
+				<input type="number" class="input pod" maxlength="1" id="pod" value="1">
+				
+				<input type="number" class="input car" maxlength="1" value="1">
+				
+			</div>
+		</div>
+	
+			
+            <div class="skills-table-container">
+                <div class="sheet-skills">
+    <table class="skills-table">
+        <thead>
+            <tr>
+                <th>Perícia</th>
+                <th>Bônus</th>
+                <th>Treino</th>
+                <th>Outros</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Atletismo</td>
+                <td id="bonus_atletismo">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="atletismo"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="atletismo"></td>
+            </tr>
+			
+			<tr>
+                <td>Culinária</td>
+                <td id="bonus_culinaria">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="culinaria"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="culinaria"></td>
+            </tr>
+			
+			<tr>
+                <td>Ciência</td>
+                <td id="bonus_ciencia">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="ciencia"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="ciencia"></td>
+            </tr>
+			
+			<tr>
+                <td>Conjurar</td>
+                <td id="bonus_conjurar">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="conjurar"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="conjurar"></td>
+            </tr>
+			
+			<tr>
+                <td>Crime</td>
+                <td id="bonus_crime">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="crime"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="crime"></td>
+            </tr>
+			
+			<tr>
+                <td>Estratégia</td>
+                <td id="bonus_estrategia">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="estrategia"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="estrategia"></td>
+            </tr>
+			
+			<tr>
+                <td>Fala</td>
+                <td id="bonus_fala">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="fala"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="fala"></td>
+            </tr>
+			
+			<tr>
+                <td>Fortitude</td>
+                <td id="bonus_fortitude">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="fortitude"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="fortitude"></td>
+            </tr>
+			
+			<tr>
+                <td>Furtividade</td>
+                <td id="bonus_furtividade">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="furtividade"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="furtividade"></td>
+            </tr>
+			
+			<tr>
+                <td>História</td>
+                <td id="bonus_historia">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="historia"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="historia"></td>
+            </tr>
+			
+			<tr>
+                <td>Iniciativa</td>
+                <td id="bonus_iniciativa">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="iniciativa"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="iniciativa"></td>
+            </tr>
+			
+			<tr>
+                <td>Intimidação</td>
+                <td id="bonus_intimidacao">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="intimidacao"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="intimidacao"></td>
+            </tr>
+			
+			<tr>
+                <td>Investigação</td>
+                <td id="bonus_investigacao">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="investigacao"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="investigacao"></td>
+            </tr>
+			
+			<tr>
+                <td>Luta</td>
+                <td id="bonus_luta">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="luta"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="luta"></td>
+            </tr>
+			
+			<tr>
+                <td>Medicina</td>
+                <td id="bonus_medicina">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="medicina"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="medicina"></td>
+            </tr>
+			
+			<tr>
+                <td>Percepção</td>
+                <td id="bonus_percepcao">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="percepcao"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="percepcao"></td>
+            </tr>
+			
+			<tr>
+                <td>Pilotagem</td>
+                <td id="bonus_pilotagem">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="pilotagem"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="pilotagem"></td>
+            </tr>
+			
+			<tr>
+                <td>Pontaria</td>
+                <td id="bonus_pontaria">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="pontaria"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="pontaria"></td>
+            </tr>
+			
+			<tr>
+                <td>Reflexos</td>
+                <td id="bonus_reflexos">(0)</td>
+                <td><input type="number" class="skill-input treino" data-pericia="reflexos"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="reflexos"></td>
+            </tr>
+			
+            <!-- Adicione mais linhas de perícias aqui -->
+        </tbody>
+    </table>
+</div>
+            </div>
+        </div>
+<div class="bars">
+	<div class="lifebar-container below">
+    <div class="lifebar">
+		<div class="health-bar" style="width: 100%;"></div>
+        <input type="number" class="current-life" value="7" min="0" max="">
+	<div class= "divisor">/</div>
+		<input type="number" class="max-life" id="vidaMaxima" value="7" min="0" max="">
+        <div class="lifebar-buttons-container">
+            <div class="lifebar-buttons left-buttons">
+                <button class="subtract-life">&lt</button>
+            </div>
+            <div class="lifebar-buttons right-buttons">
+                <button class="add-life">&gt</button>
+            </div>
+        </div>
+    </div>
+</div>
+	
+<div class="phbar-container below">
+    <div class="phbar">
+        <div class="ph-bar" style="width: 100%;"></div>
+        <input type="number" class="current-ph" value="7" min="0" max="">
+        <div class="divisor">/</div>
+        <input type="number" class="max-ph" id="phMaxima" value="7" min="0" max="">
+        <div class="phbar-buttons-container">
+            <div class="phbar-buttons left-buttons">
+                <button class="subtract-ph">&lt</button>
+            </div>
+            <div class="phbar-buttons right-buttons">
+                <button class="add-ph">&gt</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="tabs-container">
+    <nav class="tabs">
+        <button class="tab-button" data-tab-target="combat">Combate</button>
+        <button class="tab-button" data-tab-target="inventory">Inventário</button>
+        <button class="tab-button" data-tab-target="characteristics">Características</button>
+        <button class="tab-button" data-tab-target="spells">Magias</button>
+        <button class="tab-button" data-tab-target="general">Geral</button>
+    </nav>
+    <div class="tab-content" id="combat">
+      <div class="roll-container">
+	   <div>
+    <input type="text" id="roll-input" placeholder="Enter dice roll (e.g., 2d6)"> </input>
+    <button id="roll-button" class="roll-button">
+  <img class="dice-icon" src="https://static.thenounproject.com/png/763027-200.png" alt="rolar">
+</button>
+    <span id="roll-result"></span>
+
+		</div>
+		
+		<div class="combat-container below">
+    <div class="attack-container">
+        <div class="attack-row">
+            <div class="attack-cell">Ataque</div>
+            <div class="attack-cell">Tipo</div>
+            <div class="attack-cell">Rolagem</div>
+            <div class="attack-cell">Alcance</div>
+            <div class="attack-cell">Dano</div>
+            <div class="attack-cell">Critico</div>
+        
+            <div class="attack-cell">
+                <input type="text" class="attack-name">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-type">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-roll">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-range">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-damage">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-critical">
+            </div>
+			
+			<div class="attack-cell">
+                <input type="text" class="attack-name">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-type">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-roll">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-range">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-damage">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-critical">
+            </div>
+			
+			<div class="attack-cell">
+                <input type="text" class="attack-name">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-type">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-roll">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-range">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-damage">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-critical">
+            </div>
+			
+			<div class="attack-cell">
+                <input type="text" class="attack-name">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-type">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-roll">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-range">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-damage">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-critical">
+            </div>
+			
+			<div class="attack-cell">
+                <input type="text" class="attack-name">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-type">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-roll">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-range">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-damage">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-critical">
+            </div>
+			
+			<div class="attack-cell">
+                <input type="text" class="attack-name">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-type">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-roll">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-range">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-damage">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-critical">
+            </div>
+			
+			<div class="attack-cell">
+                <input type="text" class="attack-name">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-type">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-roll">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-range">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-damage">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-critical">
+            </div>
+			
+			<div class="attack-cell">
+                <input type="text" class="attack-name">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-type">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-roll">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-range">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-damage">
+            </div>
+            <div class="attack-cell">
+                <input type="text" class="attack-critical">
+            </div>
+		</div>
+    </div>
+	</div>	
+    </div>
+	</div>
+    <div class="tab-content" id="inventory">
+        <div class="inventory-container">
+		<textarea id="inventory" name="inventory" rows="10" cols="40"></textarea>
+					</div>
+    </div>
+		<div class="tab-content" id="characteristics">
+					<div class="characteristics-container">
+		<textarea id="characteristics" name="characteristics" rows="10" cols="50"></textarea>
+					</div>
+		</div>
+		<div class="tab-content" id="spells">
+        <div class="spells-textboxes">
+    <div class="spells-container">
+        <label for="textbox1">Nome</label>
+        <textarea id="textbox1" name="textbox1" rows="1" cols="25" class="spell-textbox"></textarea>
+    </div>
+    <div class="spells-container">
+        <label for="textbox2">Efeitos</label>
+        <textarea id="textbox2" name="textbox2" rows="10" cols="45" class="spell-textbox"></textarea>
+    </div>
+	
+    <div class="spells-container">
+        <label for="textbox3">Modificador de Efeitos</label>
+        <textarea id="textbox3" name="textbox2" rows="8" cols="35" class="spell-textbox" class="spell-textbox"></textarea>
+    </div>
+	
+	
+</div>
+    </div>
+    <div class="tab-content" id="general">
+        <div class="geral-textboxes">
+    <div class="textbox-container">
+        <label for="textbox1">Anotações</label>
+        <textarea id="textbox1" name="textbox1" rows="8" cols="50"></textarea>
+    </div>
+    <div class="textbox-container">
+        <label for="textbox2">Aparência</label>
+        <textarea id="textbox2" name="textbox2" rows="4" cols="5"></textarea>
+    </div>
+	
+    <div class="textbox-container">
+        <label for="textbox3">Histórico</label>
+        <textarea id="textbox3" name="textbox2" rows="4" cols="5"></textarea>
+    </div>
+	
+	<div class="textbox-container">
+        <label for="textbox4">Objetivo</label>
+        <textarea id="textbox4" name="textbox2" rows="4" cols="5"></textarea>
+    </div>
+	
+</div>
+    </div>
+</div>
+
+
+
+	<div class="buttons-container">
+		<div class="row">
+            <div class="column">
+                <button id="save">Salvar</button>
+            </div>
+        </div>
+		
+		<div class="row">
+            <div class="column">
+                <button id="load">Carregar</button>
+                <input type="file" id="fileInput" style="display: none;">
+            </div>
+        </div>
+	</div>
+		
+	</div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="js/script.js"></script>
+</html>
