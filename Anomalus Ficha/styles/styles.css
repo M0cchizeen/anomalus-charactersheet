@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: #ffe6ec;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+.form-container h1 {
+	color: #ffb3c6;
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 2px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e4b4c1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#btn {
+  position: fixed;
+  background-color: #e4b4c1;
+  bottom: 10px;
+  right: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.att-img {
+	overflow: visible;
+	margin-left: 3rem;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.att input[type="number"] {
+    text-align: center;
+    width: 2rem;
+    font-size: 26px;
+    color: var(--color-white);
+    background-color: #ffb3c6;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid var(--color-white);
+}
+
+
+.att {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.att-input-container .input {
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.for {
+    top: 26.7%;
+    left: 6.5%;
+}
+
+.des {
+    top: 6.3%;
+    left: 9.9%;
+}
+
+.int {
+    top: 6.3%;
+    left: 21.9%;
+}
+
+.con {
+    top: 47.4%;
+    left: 9.9%;
+}
+
+.pod {
+    top: 26.7%;
+    left: 25.5%;
+}
+
+.car {
+    top: 47%;
+    left: 21.9%;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+
+
+.skills-table {
+	margin-left: 2rem;
+    border-collapse: collapse;
+	border-spacing: 1px 1px;
+}
+
+.skills-table th,
+.skills-table td {
+	height: 10px;
+    text-align: left;
+
+}
+
+.skills-table th {
+	padding: 5px;
+	height: 20px;
+
+    font-weight: bold;
+}
+
+.skills-table input[type="number"] {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+}
+
+.skills-table .treino {
+    background-color: #ffb3c6;
+}
+
+.skills-table .outros {
+    background-color: #ffb3c6;
+}
+
+.skills-table input[type="number"] {
+    max-width: 20px;
+}
+
+
+.att-img-container {
+    display: flex;
+    align-items: center;
+    margin: 0 3rem;
+    position: relative;
+}
+
+
+.att-img img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.skills-table-container {
+    margin-left: 3rem;
+    flex: 1;
+}
+
+.lifebar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 3rem;
+}
+
+.lifebar-buttons-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lifebar {
+	top: -8rem;
+    width: 20rem;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+	background-color: #ff5468;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+}
+
+.lifebar-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff5468;
+    color: white;
+    margin: 5px;
+	margin-top: 6px;
+}
+
+.left-buttons {
+    left: 0;
+}
+
+.right-buttons {
+    right: 0;
+}
+
+.lifebar-buttons button {
+    border: none;
+	line-height: 20px;
+    background: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.lifebar-buttons .current-life,
+.lifebar-buttons .max-life {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.lifebar .current-life,
+.lifebar .max-life {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.current-life,
+.max-life {
+  width: 25px;
+  margin: 0 2px;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+  font-size: 14px;
+  border: none;
+  z-index: 1;
+}
+
+.health-bar {
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+   max-width: 100%;
+   z-index: 0;
+}
+
+.divisor {
+  z-index: 1;
+}
+
+.phbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 3rem;
+}
+
+.phbar {
+	top: -9rem;
+    width: 20rem;
+    height: 30px;
+    background-color: #9b5de5;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+}
+
+.phbar-buttons-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.phbar-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #9b5de5;
+    margin: 5px;
+    margin-top: 6px;
+}
+
+.left-buttons {
+    left: 0;
+}
+
+.right-buttons {
+    right: 0;
+}
+
+.phbar-buttons button {
+    border: none;
+    line-height: 20px;
+    background: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.phbar .current-ph,
+.phbar .max-ph {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.current-ph,
+.max-ph {
+    width: 25px;
+    margin: 0 2px;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    font-size: 14px;
+    border: none;
+	z-index: 1;
+}
+
+.phbar .ph-bar {
+    height: 100%;
+    background-color: purple;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+}
+
+.phbar .divisor {
+    z-index: 1;
+}
+
+.below {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.bars {
+  top: -8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 3rem;
+}
+
+.characteristics-container {
+  margin-top: 12rem;
+
+  margin-right: 8rem;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  overflow: visible;
+}
+
+.characteristics-container textarea {
+	  resize: none;
+	margin-top: -10rem;
+   width: 50%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.tabs-container {
+  margin-top: -33rem;
+  margin-left: 47.5rem;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  
+}
+
+.tab-button {
+  padding: 7px 12px;
+  font-size: 14px;
+}
+
+.buttons-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+}
+
+.buttons-container button {
+  margin-left: -80rem;
+}
+
+#roll-button {
+	padding: 1px;
+  position: relative;
+  background-color: transparent;
+  bottom: 1px;
+  left: 1px;
+  
+}
+
+
+#roll-input {
+  position: relative;
+  background-color: #f2f2f2;
+  bottom: 10px;
+  left: -1rem;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+
+#roll-result {
+  position: fixed;
+  background-color: #f2f2f2;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  
+}
+
+.dice-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.roll-container {
+	margin-top: 2rem;
+	margin-bottom: 8rem;
+	overflow: visible;
+}
+
+.tab-button.active {
+    background-color: #ff667a;
+}
+
+.inventory-container {
+  margin-top: 12rem;
+
+  margin-right: 8rem;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  overflow: visible;
+}
+
+.inventory-container textarea {
+	  resize: none;
+	margin-top: -10rem;
+   width: 60%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.geral-textboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.textbox-container {
+    flex-basis: calc(49% - 10px);
+    margin-bottom: 1rem;
+}
+
+.textbox-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.textbox-container textarea {
+    resize: vertical;
+    width: 90%;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .textbox-container {
+        flex-basis: 100%;
+    }
+}
+
+.combat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 3rem;
+}
+
+.attack-container {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attack-row {
+    display: grid;
+	margin-left: -7rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+.attack-cell {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.attack-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 3rem;
+}
+
+.attack-cell {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.attack-cell input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.spells-textboxes {
+	resize: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+
+.textbox-container textarea {
+    resize: vertical;
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.spells-container {
+	resize: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 3rem;
+}
+
+.spell-textbox {
+	resize: none;
+}
+
+#private-content {
+    display: none;
+}
