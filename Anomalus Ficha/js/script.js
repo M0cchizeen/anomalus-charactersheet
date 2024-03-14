@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 	
 	const privateContent = document.getElementById('private-content');
-const username = 'user1'; // Mude isto para o nome de usuário do jogador
-const password = 'pass1'; // Mude isto para a senha do jogador
+const username = 'Anomalus'; // Mude isto para o nome de usuário do jogador
+const password = 'Niko'; // Mude isto para a senha do jogador
 
 function showPrivateContent() {
     const inputUsername = prompt('Por favor, insira o nome de usuário:');
