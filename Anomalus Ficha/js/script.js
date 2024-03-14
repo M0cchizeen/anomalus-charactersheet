@@ -339,6 +339,31 @@ function generateAttackRows(attacks) {
     });
 }
 
+const playerNameInput = document.getElementById('player-name');
+const createAccountButton = document.getElementById('create-account');
+const loadAccountButton = document.getElementById('load-account');
+const accountInfo = document.getElementById('account-info');
+
+createAccountButton.addEventListener('click', function () {
+    const playerName = playerNameInput.value;
+    if (!playerName) {
+        alert('Por favor, insira um nome de jogador');
+        return;
+    }
+    const playerAccount = {
+        name: playerName,
+        level: 1,
+        experience: 0,
+        gold: 0,
+        inventory: []
+    };
+    localStorage.setItem(playerName, JSON.stringify(playerAccount));
+    loadAccountButton.disabled = false;
+    accountInfo.textContent = `Conta criada com sucesso para ${playerName}`;
+});
+
+loadAccountButton.addEventListener('click', function () {
+    const playerName
 
 });
 
