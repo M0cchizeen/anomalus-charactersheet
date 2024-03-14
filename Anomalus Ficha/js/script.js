@@ -339,10 +339,24 @@ function generateAttackRows(attacks) {
     });
 }
 
-const playerNameInput = document.getElementById('player-name');
+const loginButton = document.getElementById('login-button');
 const createAccountButton = document.getElementById('create-account');
 const loadAccountButton = document.getElementById('load-account');
 const accountInfo = document.getElementById('account-info');
+const playerNameInput = document.getElementById('player-name');
+const privateContent = document.getElementById('private-content');
+
+loginButton.addEventListener('click', function () {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'user1' && password === 'pass1') {
+        privateContent.style.display = 'none';
+        document.getElementById('player-form').style.display = 'block';
+    } else {
+        alert('Invalid username or password');
+    }
+});
 
 createAccountButton.addEventListener('click', function () {
     const playerName = playerNameInput.value;
@@ -363,7 +377,13 @@ createAccountButton.addEventListener('click', function () {
 });
 
 loadAccountButton.addEventListener('click', function () {
-    const playerName
-
+    const playerName = playerNameInput.value;
+    const playerAccount = JSON.parse(localStorage.getItem(playerName));
+    if (!playerAccount) {
+        alert('Conta não encontrada');
+        return;
+    }
+    accountInfo.textContent = `Nome: ${playerAccount.name}, Level: ${playerAccount.level}, Experience: ${playerAccount.experience}, Gold: ${playerAccount.gold}`;
+    // Carregue a ficha dojogador aqui usando o objeto playerAccount
 });
 
