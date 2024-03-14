@@ -400,8 +400,11 @@ function generateAttackRows(attacks) {
 
         attackContainer.appendChild(attackRow);
     });
-}
 
+};
 
 });
 
+});
+
+});
