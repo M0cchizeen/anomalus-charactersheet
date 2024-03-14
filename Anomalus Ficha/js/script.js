@@ -388,3 +388,4 @@ function generateAttackRows(attacks) {
 
 });
 
+});
