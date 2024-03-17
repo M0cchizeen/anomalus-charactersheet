@@ -6,30 +6,10 @@
     <link rel="stylesheet" href="Anomalus Ficha/styles/styles.css">
     <title>Ficha de RPG</title>
 </head>
-<div id="private-content">
-        <div id="player-form">
-            <h1>Anomalus - Jogador</h1>
-            <form>
-                <label for="player-name">Nome do Jogador:</label>
-                <input type="text" id="player-name" placeholder="Digite seu nome de jogador">
-                <button id="create-account">Criar conta</button>
-                <button id="load-account">Carregar conta</button>
-            </form>
-            <div id="account-info"></div>
-        </div>
-		
-		<div id="login-form">
-    <h1>Anomalus</h1>
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <label for="password">Password:</label><input type="password" id="password" name="password">
-        <button type="button" id="login-button">Login</button>
-    </form>
-</div>
+
 		
 <body>
-
+<div class="content-to-save" id="saveContent">
     <div class="form-container">
         <h1>Anomalus</h1>
         <div class="row">
@@ -65,18 +45,18 @@
             </div>
 			
 			<div class="att-input-container">
-		<div class="att">
-				<input type="number" class="input for" maxlength="1" value="1">
+		<div class="att" id="attributes">
+				<input type="number" class="input for" maxlength="1" id="forc" value="1">
 				
-				<input type="number" class="input des" maxlength="1" value="1">
+				<input type="number" class="input des" maxlength="1" id="des" value="1">
 				
-				<input type="number" class="input int" maxlength="1" value="1">
+				<input type="number" class="input int" maxlength="1" id="inte" value="1">
 				
 				<input type="number" class="input con" maxlength="1" id="con" value="1">
 				
 				<input type="number" class="input pod" maxlength="1" id="pod" value="1">
 				
-				<input type="number" class="input car" maxlength="1" value="1">
+				<input type="number" class="input car" maxlength="1" id="car" value="1">
 				
 			</div>
 		</div>
@@ -84,7 +64,7 @@
 			
             <div class="skills-table-container">
                 <div class="sheet-skills">
-    <table class="skills-table">
+    <table class="skills-table" id="skills">
         <thead>
             <tr>
                 <th>Perícia</th>
@@ -97,134 +77,134 @@
             <tr>
                 <td>Atletismo</td>
                 <td id="bonus_atletismo">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="atletismo"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="atletismo"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="atletismo" id="atletismotreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="atletismo" id="atletismooutros"></td>
             </tr>
 			
 			<tr>
                 <td>Culinária</td>
                 <td id="bonus_culinaria">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="culinaria"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="culinaria"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="culinaria" id="culinariatreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="culinaria" id="culinariaoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Ciência</td>
                 <td id="bonus_ciencia">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="ciencia"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="ciencia"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="ciencia" id="cienciatreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="ciencia" id="cienciaoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Conjurar</td>
                 <td id="bonus_conjurar">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="conjurar"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="conjurar"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="conjurar" id="conjurartreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="conjurar" id="conjuraroutros"></td>
             </tr>
 			
 			<tr>
                 <td>Crime</td>
                 <td id="bonus_crime">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="crime"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="crime"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="crime" id="crimetreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="crime" id="crimeoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Estratégia</td>
                 <td id="bonus_estrategia">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="estrategia"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="estrategia"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="estrategia" id="estrategiatreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="estrategia" id="estrategiaoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Fala</td>
                 <td id="bonus_fala">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="fala"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="fala"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="fala" id="falatreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="fala" id="falaoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Fortitude</td>
                 <td id="bonus_fortitude">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="fortitude"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="fortitude"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="fortitude" id="fortitudetreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="fortitude" id="fortitudeoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Furtividade</td>
                 <td id="bonus_furtividade">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="furtividade"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="furtividade"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="furtividade" id="furtividadetreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="furtividade" id="furtividadeoutros"></td>
             </tr>
 			
 			<tr>
                 <td>História</td>
                 <td id="bonus_historia">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="historia"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="historia"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="historia" id="historiatreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="historia" id="historiaoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Iniciativa</td>
                 <td id="bonus_iniciativa">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="iniciativa"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="iniciativa"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="iniciativa" id="iniciativatreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="iniciativa" id="iniciativaoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Intimidação</td>
                 <td id="bonus_intimidacao">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="intimidacao"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="intimidacao"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="intimidacao" id="intimidacaotreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="intimidacao" id="intimidacaooutros"></td>
             </tr>
 			
 			<tr>
                 <td>Investigação</td>
                 <td id="bonus_investigacao">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="investigacao"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="investigacao"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="investigacao" id="investigacaotreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="investigacao" id="investigacaooutros"></td>
             </tr>
 			
 			<tr>
                 <td>Luta</td>
                 <td id="bonus_luta">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="luta"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="luta"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="luta" id="lutatreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="luta" id="lutaoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Medicina</td>
                 <td id="bonus_medicina">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="medicina"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="medicina"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="medicina" id="medicinatreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="medicina" id="medicinaoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Percepção</td>
                 <td id="bonus_percepcao">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="percepcao"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="percepcao"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="percepcao" id="percepcaotreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="percepcao" id="percepcaooutros"></td>
             </tr>
 			
 			<tr>
                 <td>Pilotagem</td>
                 <td id="bonus_pilotagem">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="pilotagem"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="pilotagem"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="pilotagem" id="pilotagemtreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="pilotagem" id="pilotagemoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Pontaria</td>
                 <td id="bonus_pontaria">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="pontaria"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="pontaria"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="pontaria" id="pontariatreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="pontaria" id="pontariaoutros"></td>
             </tr>
 			
 			<tr>
                 <td>Reflexos</td>
                 <td id="bonus_reflexos">(0)</td>
-                <td><input type="number" class="skill-input treino" data-pericia="reflexos"></td>
-                <td><input type="number" class="skill-input outros" data-pericia="reflexos"></td>
+                <td><input type="number" class="skill-input treino" data-pericia="reflexos" id="reflexostreino"></td>
+                <td><input type="number" class="skill-input outros" data-pericia="reflexos" id="reflexosoutros"></td>
             </tr>
 			
             <!-- Adicione mais linhas de perícias aqui -->
@@ -299,155 +279,155 @@
             <div class="attack-cell">Critico</div>
         
             <div class="attack-cell">
-                <input type="text" class="attack-name">
+                <input type="text" class="attack-name" id="attackname1">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-type">
+                <input type="text" class="attack-type" id="attacktype1">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-roll">
+                <input type="text" class="attack-roll" id="attackroll1">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-range">
+                <input type="text" class="attack-range" id="attackrange1">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-damage">
+                <input type="text" class="attack-damage" id="attackdamage1">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-critical">
+                <input type="text" class="attack-critical" id="attackcritical1">
             </div>
 			
 			<div class="attack-cell">
-                <input type="text" class="attack-name">
+                <input type="text" class="attack-name" id="attackname2">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-type">
+                <input type="text" class="attack-type" id="attacktype2">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-roll">
+                <input type="text" class="attack-roll" id="attackroll2">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-range">
+                <input type="text" class="attack-range" id="attackrange2">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-damage">
+                <input type="text" class="attack-damage" id="attackdamage2">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-critical">
+                <input type="text" class="attack-critical" id="attackcritical2">
             </div>
 			
 			<div class="attack-cell">
-                <input type="text" class="attack-name">
+                <input type="text" class="attack-name" id="attackname3">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-type">
+                <input type="text" class="attack-type" id="attacktype3">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-roll">
+                <input type="text" class="attack-roll" id="attackroll3">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-range">
+                <input type="text" class="attack-range" id="attackrange3">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-damage">
+                <input type="text" class="attack-damage" id="attackdamage3">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-critical">
+                <input type="text" class="attack-critical" id="attackcritical3">
             </div>
 			
 			<div class="attack-cell">
-                <input type="text" class="attack-name">
+                <input type="text" class="attack-name" id="attackname4">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-type">
+                <input type="text" class="attack-type" id="attacktype4">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-roll">
+                <input type="text" class="attack-roll" id="attackroll4">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-range">
+                <input type="text" class="attack-range" id="attackrange4">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-damage">
+                <input type="text" class="attack-damage" id="attackdamage4">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-critical">
+                <input type="text" class="attack-critical" id="attackcritical4">
             </div>
 			
 			<div class="attack-cell">
-                <input type="text" class="attack-name">
+                <input type="text" class="attack-name" id="attackname5">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-type">
+                <input type="text" class="attack-type" id="attacktype5">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-roll">
+                <input type="text" class="attack-roll" id="attackroll5">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-range">
+                <input type="text" class="attack-range" id="attackrange5">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-damage">
+                <input type="text" class="attack-damage" id="attackdamage5">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-critical">
+                <input type="text" class="attack-critical" id="attackcritical5">
             </div>
 			
 			<div class="attack-cell">
-                <input type="text" class="attack-name">
+                <input type="text" class="attack-name" id="attackname6">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-type">
+                <input type="text" class="attack-type" id="attacktype6">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-roll">
+                <input type="text" class="attack-roll" id="attackroll6">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-range">
+                <input type="text" class="attack-range" id="attackrange6">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-damage">
+                <input type="text" class="attack-damage" id="attackdamage6">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-critical">
+                <input type="text" class="attack-critical" id="attackcritical6">
             </div>
 			
 			<div class="attack-cell">
-                <input type="text" class="attack-name">
+                <input type="text" class="attack-name" id="attackname7">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-type">
+                <input type="text" class="attack-type" id="attacktype7">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-roll">
+                <input type="text" class="attack-roll" id="attackroll7">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-range">
+                <input type="text" class="attack-range" id="attackrange7">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-damage">
+                <input type="text" class="attack-damage" id="attackdamage7">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-critical">
+                <input type="text" class="attack-critical" id="attackcritical7">
             </div>
 			
 			<div class="attack-cell">
-                <input type="text" class="attack-name">
+                <input type="text" class="attack-name" id="attackname8">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-type">
+                <input type="text" class="attack-type" id="attacktype8">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-roll">
+                <input type="text" class="attack-roll" id="attackroll8">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-range">
+                <input type="text" class="attack-range" id="attackrange8">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-damage">
+                <input type="text" class="attack-damage" id="attackdamage8">
             </div>
             <div class="attack-cell">
-                <input type="text" class="attack-critical">
+                <input type="text" class="attack-critical" id="attackcritical8">
             </div>
 		</div>
     </div>
@@ -456,19 +436,19 @@
 	</div>
     <div class="tab-content" id="inventory">
         <div class="inventory-container">
-		<textarea id="inventory" name="inventory" rows="10" cols="40"></textarea>
+		<textarea name="inventory" rows="10" cols="40" id="inv"></textarea>
 					</div>
     </div>
 		<div class="tab-content" id="characteristics">
 					<div class="characteristics-container">
-		<textarea id="characteristics" name="characteristics" rows="10" cols="50"></textarea>
+		<textarea id="charc" name="characteristics" rows="10" cols="50" class="characteristics"></textarea>
 					</div>
 		</div>
 		<div class="tab-content" id="spells">
         <div class="spells-textboxes">
     <div class="spells-container">
         <label for="textbox1">Nome</label>
-        <textarea id="textbox1" name="textbox1" rows="1" cols="25" class="spell-textbox"></textarea>
+        <textarea id="textbox1" name="textbox1" rows="1" cols="25" class="spell-textbox""></textarea>
     </div>
     <div class="spells-container">
         <label for="textbox2">Efeitos</label>
@@ -486,22 +466,22 @@
     <div class="tab-content" id="general">
         <div class="geral-textboxes">
     <div class="textbox-container">
-        <label for="textbox1">Anotações</label>
-        <textarea id="textbox1" name="textbox1" rows="8" cols="50"></textarea>
+        <label for="textbox4">Anotações</label>
+        <textarea id="textbox4" name="textbox1" rows="8" cols="50"></textarea>
     </div>
     <div class="textbox-container">
-        <label for="textbox2">Aparência</label>
-        <textarea id="textbox2" name="textbox2" rows="4" cols="5"></textarea>
+        <label for="textbox5">Aparência</label>
+        <textarea id="textbox5" name="textbox2" rows="4" cols="5"></textarea>
     </div>
 	
     <div class="textbox-container">
-        <label for="textbox3">Histórico</label>
-        <textarea id="textbox3" name="textbox2" rows="4" cols="5"></textarea>
+        <label for="textbox6">Histórico</label>
+        <textarea id="textbox6" name="textbox2" rows="4" cols="5"></textarea>
     </div>
 	
 	<div class="textbox-container">
-        <label for="textbox4">Objetivo</label>
-        <textarea id="textbox4" name="textbox2" rows="4" cols="5"></textarea>
+        <label for="textbox7">Objetivo</label>
+        <textarea id="textbox7" name="textbox2" rows="4" cols="5"></textarea>
     </div>
 	
 </div>
@@ -511,7 +491,7 @@
 
 <div class="saveload-buttons">
 	<div class="buttons-container">
-		<div class="row">
+    <div class="row">
             <div class="column">
                 <button id="save">Salvar</button>
             </div>
@@ -523,11 +503,12 @@
                 <input type="file" id="fileInput" style="display: none;">
             </div>
         </div>
-	</div>
-		
-	</div>
-</div>
+      </div>
+      </div>
+	</div>	
+	
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="Anomalus Ficha/js/script.js"></script>
+	</div>
 </html>

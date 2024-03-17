@@ -471,10 +471,12 @@ tbody {
   right: 0;
   bottom: 0;
   margin: 1rem;
+  margin-bottom: -2rem;
+   margin-right: 75rem;
 }
 
 .buttons-container button {
-  margin-left: -80rem;
+
 }
 
 #roll-button {
