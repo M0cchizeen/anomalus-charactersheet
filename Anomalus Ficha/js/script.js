@@ -1,6 +1,23 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   
+  const privateContent = document.getElementById('private-content');
+const username = 'Anomalus'; // Mude isto para o nome de usuário do jogador
+const password = 'Niko'; // Mude isto para a senha do jogador
+
+function showPrivateContent() {
+    const inputUsername = prompt('Por favor, insira o nome de usuário:');
+    const inputPassword = prompt('Agora, insira a senha:');
+
+    if (inputUsername === username && inputPassword === password) {
+        privateContent.style.display = 'block';
+    } else {
+        alert('Nome de usuário ou senha incorretos!');
+    }
+}
+
+showPrivateContent();
+  
   document.getElementById('save').addEventListener('click', function() {
         const personagem = document.getElementById('personagem').value;
         const jogador = document.getElementById('jogador').value;
